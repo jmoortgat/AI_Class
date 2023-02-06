@@ -552,6 +552,6 @@ if credential := os.getenv("SAS_TOKEN"):
     )
     with open(file=filename, mode="rb") as f:
         blob_obj: azure.storage.blob.BlobClient = container_client.upload_blob(
-            name=f"data/predictions/{filename}", data=f, overwrite=True
+            name=f"data_US/predictions/{filename}", data=f, overwrite=True
         )
     print(f"Uploaded to {account_url}/{blob_obj.blob_name}")
